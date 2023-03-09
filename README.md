@@ -95,6 +95,12 @@ If you are using a different platform or Python version, you can find the approp
 + Got above instructions but getting same error again even by running above command.
 
 
+**SOLVING THE ERROR**
+
+I changed the command with "sudo pip3 -r requirements.txt" 
++ still getting same 
+
+**Disaapointing!**
 
 
 
