@@ -102,11 +102,53 @@ I changed the command with "sudo pip3 -r requirements.txt"
 
 **Disaapointing!**
 
+Again, Searching for the solution 
+ON STACK OVERFLOW
+```
+https://stackoverflow.com/questions/20023131/cannot-install-pyaudio-gcc-error
+```
+I run the command of " sudo apt-get install python-pyaudio python3-pyaudio" 
+and get the results as
+```
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+E: Unable to locate package python-pyaudio
 
+```
+Again Next command 
+```
+pip install pyaudio
 
+```
+Got the same error 
 
-
-
+I issue the following command 
+```
+pip install -r requirements.txt
+  276  sudo apt-get install portaudio19-dev
+  277  pip install -r requirements.txt
+  278  pip install pyaudio
+  279  pip install --no-cache-dir --ignore-installed --force-reinstall https://download.lfd.uci.edu/pythonlibs/w4tscw6k/pyaudio-0.2.11-cp38-cp38-linux_x86_64.whl
+  280  pip install -r requirements.txt
+  281  sudo pip3 install -r requirements.txt
+  282  sudo apt-get install python-pyaudio
+  283  pip install -r requirements.txt
+  284  curl -LO https://github.com/mozilla/DeepSpeech/releases/download/v0.9.3/audio-0.9.3.tar.gz
+  285  sudo pip3 install -r requirements.txt
+  286  sudo apt-get install python-pyaudio python3-pyaudio
+  287  tree
+  288  pip install pyaudio
+  289  pip install wheel
+  290  pip install ./third-party/WHEEL_FILENAME
+  291  ls
+  292  pip install audio-0.9.3.tar.gz
+  293  pip install pyaudio
+  294  sudo pip3 install -r requirements.txt
+  295  sudo apt-get install libasound-dev portaudio19-dev libportaudio2 libportaudiocpp0
+  296  pip install pyaudio --user
+```
+But I am unable to get the solution as "pip install pyaudio" is not working beyond 3.6 version.
 
 
 
