@@ -150,7 +150,20 @@ pip install -r requirements.txt
 ```
 But I am unable to get the solution as "pip install pyaudio" is not working beyond 3.6 version.
 
++ got suggestion to run  "sudo apt-get install portaudio19-dev"
 
-
+```
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+You might want to run 'apt --fix-broken install' to correct these.
+The following packages have unmet dependencies:
+ linux-image-5.15.0-67-generic : Depends: linux-modules-5.15.0-67-generic but it is not going to be installed
+ portaudio19-dev : Depends: libasound2-dev but it is not going to be installed
+                   Depends: libjack-dev
+                   Depends: libportaudio2 (= 19.6.0-1build1) but it is not going to be installed
+                   Depends: libportaudiocpp0 (= 19.6.0-1build1) but it is not going to be installed
+E: Unmet dependencies. Try 'apt --fix-broken install' with no packages (or specify a solution).
+```
 
 
