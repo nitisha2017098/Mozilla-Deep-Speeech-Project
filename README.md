@@ -167,3 +167,84 @@ E: Unmet dependencies. Try 'apt --fix-broken install' with no packages (or speci
 ```
 
 
+### Error solved
+```
+This is a message from the Ubuntu package manager, indicating that there 
+are some unmet dependencies when trying to install packages.
+
+The error message suggests running the command 'apt --fix-broken install' 
+to attempt to fix the issue automatically. You can try running this command 
+as it may resolve the issue.
+
+If that does not work, you may need to manually install the missing dependencies. 
+In this case, the package 'linux-image-5.15.0-67-generic' requires the package 
+'linux-modules-5.15.0-67-generic', which is not going to be installed. You can 
+try to install this package manually using the command 'sudo apt-get install 
+linux-modules-5.15.0-67-generic'.
+
+Additionally, the package 'portaudio19-dev' has multiple unmet dependencies 
+including 'libasound2-dev', 'libjack-dev', 'libportaudio2', and 'libportaudiocpp0'. 
+You can try to install these packages using the command 'sudo apt-get install libasound2-dev libjack-dev libportaudio2 libportaudiocpp0'.
+```
+
+Afrer "sudo apt-get install libasound2-dev libjack-dev libportaudio2 libportaudiocpp0"
+above command Iussed again same command 
+```
+sudo apt install portaudio19-dev
+```
+and its done with follwoing messages
+```
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+The following packages were automatically installed and are no longer required:
+  libfwupdplugin1 libxmlb1 linux-headers-5.15.0-46-generic linux-hwe-5.15-headers-5.15.0-46 linux-image-5.15.0-46-generic linux-modules-5.15.0-46-generic linux-modules-extra-5.15.0-46-generic
+Use 'sudo apt autoremove' to remove them.
+Suggested packages:
+  portaudio19-doc
+The following NEW packages will be installed:
+  portaudio19-dev
+0 upgraded, 1 newly installed, 0 to remove and 32 not upgraded.
+Need to get 106 kB of archives.
+After this operation, 628 kB of additional disk space will be used.
+Get:1 http://in.archive.ubuntu.com/ubuntu focal/universe amd64 portaudio19-dev amd64 19.6.0-1build1 [106 kB]
+Fetched 106 kB in 2s (62.7 kB/s)          
+Selecting previously unselected package portaudio19-dev:amd64.
+(Reading database ... 236755 files and directories currently installed.)
+Preparing to unpack .../portaudio19-dev_19.6.0-1build1_amd64.deb ...
+Unpacking portaudio19-dev:amd64 (19.6.0-1build1) ...
+Setting up portaudio19-dev:amd64 (19.6.0-1build1) ...
+```
+then 
+```
+sudo pip3 install -r requirements.txt
+```
+and issue resolved!!
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
