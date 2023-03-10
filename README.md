@@ -221,8 +221,65 @@ sudo pip3 install -r requirements.txt
 ```
 and issue resolved!!
 
++ Command in between
+```
+  329  cd Downloads
+  330  cd ProjectDeepspeech
+  331  ls
+  332  mv deepspeech-0.9.3-models.*DeepSpeech-examples/
+  333  mv deepspeech-0.9.3-models.*DeepSpeech-examples/ls
+  334  mv deepspeech-0.9.3-models.* DeepSpeech-examples/ls
+  335  mv deepspeech-0.9.3-models.* DeepSpeech-examples/mic_vad_streaming/
+  336  ls
+  337  cd DeepSpeech-examples
+  338  ls
+  339  cd mic_vad_streaming
+  340  ls
+  341  python3 mic_vad_streaming.py -m deepspeech-0.9.3-models.pbmm -s deepspeech-0.9.3-models.scorer
+  342 
+```
 
 
+### Finally its done and ready to listen to speech and convert it into text
+```
+niti@niti:~/Downloads/ProjectDeepspeech/DeepSpeech-examples/mic_vad_streaming$ python3 mic_vad_streaming.py -m deepspeech-0.9.3-models.pbmm -s deepspeech-0.9.3-models.scorer
+Initializing model...
+INFO:root:ARGS.model: deepspeech-0.9.3-models.pbmm
+TensorFlow: v2.3.0-6-g23ad988
+DeepSpeech: v0.9.3-0-gf2e9c85
+2023-03-10 13:43:32.795685: I tensorflow/core/platform/cpu_feature_guard.cc:142] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN)to use the following CPU instructions in performance-critical operations:  AVX2 AVX512F FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+INFO:root:ARGS.scorer: deepspeech-0.9.3-models.scorer
+ALSA lib pcm_dmix.c:1089:(snd_pcm_dmix_open) unable to open slave
+ALSA lib pcm.c:2642:(snd_pcm_open_noupdate) Unknown PCM cards.pcm.rear
+ALSA lib pcm.c:2642:(snd_pcm_open_noupdate) Unknown PCM cards.pcm.center_lfe
+ALSA lib pcm.c:2642:(snd_pcm_open_noupdate) Unknown PCM cards.pcm.side
+ALSA lib pcm_route.c:869:(find_matching_chmap) Found no matching channel map
+ALSA lib pcm_oss.c:377:(_snd_pcm_oss_open) Unknown field port
+ALSA lib pcm_oss.c:377:(_snd_pcm_oss_open) Unknown field port
+ALSA lib pcm_usb_stream.c:486:(_snd_pcm_usb_stream_open) Invalid type for card
+ALSA lib pcm_usb_stream.c:486:(_snd_pcm_usb_stream_open) Invalid type for card
+ALSA lib pcm_dmix.c:1089:(snd_pcm_dmix_open) unable to open slave
+Listening (ctrl-C to exit)...
+Recognized: hello everyone
+Recognized: you
+```
++ It is not stable
+```
+Recognized: he
+Recognized: i do 
+Recognized: good morning
+Recognized: 
+Recognized: 
+Recognized: 
+Recognized: happy and shall
+Recognized: 
+Recognized: he
+Recognized: 
+Recognized: welcome to whom
+Recognized: he composed
+Recognized: come home
+```
 
 
 
